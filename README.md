@@ -17,6 +17,8 @@ This guide will cover:
 - [Python](#python)
 - [JavaScript (jQuery)](#js)
 
+### Why
+The point of maintaining code standards is to maintain a general sense of structure and quality within a project group to better allow expansion, understanding of the code, and resource management. A text document with examples is one of the best ways (if not the best one) to convey and collect these standards and because I have failed to find any other documents that suit my style and projects I have decided to create my own.
 
 Do not consider this guide final, additions are always welcome.
 
@@ -26,6 +28,17 @@ For the love of god, please make sure to configure the indentation settings of y
 
 <a name="general"></a>
 ## General
+
+### Project Structure
+A project should at all points be based around a method of version control in one form or another. My preference goes out to Git. Whenever I use Git in a project, I try to utilize a branch based workflow. This boils down to something very simple: the main project is kept on the master branch, this is the presentable branch. Which is updated at certain intervals, this could for example be after every sprint in a SCRUM-based project or at every release of your product. Next up is the development branch, this contains the most recent version of the project with all completed features. Lastly there is a collection of branches refered to as feature branches. These branches are where the developers will actually work.
+
+Every seperate feature should get a seperate branch and the depenendency from one feature branch to another should be kept as small as possible. The developer will work according to the discussed coding standards.
+Whenever a commit is made, the developer should make clear that the commit message is a short, clear, description of the changes made in the commit.
+It is key for the developer to make a commit for every independent modification, so that commits can be easily reversed. A thing to keep in mind with this is: if you feel like using the words "and I also did" (or something of that nature) in your commit message, you should probably split this commit into multiple ones.
+
+Whenever a feature is done (in otherwords functional), there shall be a pull request created from said feature branch to the development branch. This feature will have to be reviewed by the person that is responsible for the product quality, or someone appointed for this task by said quality manager. During the review process the reviewer will check whether the produced code fits the standards and if the functionallity works (which is determined by running the unit tests). If the conditions are met and there are no merge conflicts, the code can be merged into the development branch.
+
+### Coding
 Use descriptive function/method/class/variable/file names. I don't want none of that ```int d = 1;``` bs. Exception being when the variable is used as an iterator. But you should have a long, hard, internal discussion before even thinking of doing that.
 
 <a name="oop"></a>
