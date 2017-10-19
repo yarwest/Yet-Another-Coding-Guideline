@@ -6,12 +6,18 @@ Hey hello
 This guide serves as a set of guidelines for writing maintainable and readable code troughout the entire webstack.
 This guide will cover:
 -[HTML](#HTML)
+
 -[CSS (SCSS)](#CSS/SCSS)
+
 -[PHP](#PHP)
+
 -[JavaScript (jQuery)](#Javascript/jQuery)
 
+
 Do not consider this guide final, additions are always welcome.
+
 I do however strongly recommend following these guidlines if you want to prevent your team members from going insane before the end of the project.
+
 For the love of god, please make sure to configure the indentation settings of your editor/IDE to a single tab character with a width of 4 spaces. 
 
 ## HTML
@@ -36,20 +42,21 @@ Example:
 Prevent using extra classes or ids in your HTML where a modified CSS selector would suffice. 
 
 ## CSS/SCSS
-Again, not much to say right now.
+Again, not much to say right now. I will be assuming the use of SCSS for 90% of the time.
 
 ### General
-Constants that are to be used in multiple stylesheets should be defined in the variables.scss file. This file should contain no actual style rules, just variables. Try to initalize file specific variables at the beginning of the file.
+Constants that are to be used in multiple stylesheets should be defined in the ```variables.scss``` file. This file should contain no actual style rules, just variables. Try to initalize file specific variables at the beginning of the file.
 
 The style rules are to be indented with a single tab charachter with a width of 4 spaces. The opening bracket of a code block is supposed to be on the same line as the selector.
 Example:
 ```css
 .redText {
 	color: red;
-}
+}```
 
 Nest your code blocks whenever possible to prevent unwanted behaviour.
 Example:
+```css
 .text {
 	line-height: 5px;
 	.red {
@@ -84,15 +91,15 @@ Example:
  * This class contains method(s) that will help you document.
  */
 class documenter {
-/**
- * This method is responsible for showing you how to document.
- * @param text, a string that has to be printed.
- * @return the printed string
- */
-function exampleFunction($text) {
-	echo $text;
-	return $text
-}
+	/**
+ 	 * This method is responsible for showing you how to document.
+ 	 * @param text, a string that has to be printed.
+ 	 * @return the printed string
+ 	 */
+	function exampleFunction($text) {
+		echo $text;
+		return $text
+	}
 }
 ```
 
