@@ -2,8 +2,10 @@
 Hey hello
 
 # Coding Style Guide/Best Practices
- 
-This guide serves as a set of guidelines for writing maintainable and readable code troughout the entire webstack.
+
+This guide serves as a set of guidelines for writing maintainable and readable code troughout the entire stack.
+Small note: this guide (especially the General Topics section) is not limited to just code but also general steps that can be taken to assure the quality of a software product/project.
+
 This guide will cover:
 
 - [General Topics](#general)
