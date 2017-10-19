@@ -6,9 +6,13 @@ Hey hello
 This guide serves as a set of guidelines for writing maintainable and readable code troughout the entire webstack.
 This guide will cover:
 
+- [General Topics](#general)
+- [Object Orientated Programming](#oop)
 - [HTML](#html)
 - [CSS (SCSS)](#css)
 - [PHP](#php)
+- [Java](#java)
+- [Python](#python)
 - [JavaScript (jQuery)](#js)
 
 
@@ -16,10 +20,19 @@ Do not consider this guide final, additions are always welcome.
 
 I do however strongly recommend following these guidlines if you want to prevent your team members from going insane before the end of the project.
 
-For the love of god, please make sure to configure the indentation settings of your editor/IDE to a single tab character with a width of 4 spaces. 
+For the love of god, please make sure to configure the indentation settings of your editor/IDE to a single tab character with a width of 4 spaces.
 
-## HTML <a name="HTML"></a>
-There isn’t much I can think up for HTML right now.
+<a name="general"></a>
+## General
+Use descriptive function/method/class/variable/file names. I don't want none of that ```int d = 1;``` bs. Exception being when the variable is used as an iterator. But you should have a long, hard, internal discussion before even thinking of doing that.
+
+<a name="oop"></a>
+## Object Orientated Programming
+This ain't hard, just make some classes.
+
+<a name="html"></a>
+## HTML
+There isn’t much I can think up for HTML right now. todo.
 
 ### General
 Children elements are supposed to be indented with a single tab charachter with a width of 4 spaces.
@@ -37,9 +50,10 @@ Example:
 <p class=”redText”>This is a red text</p>
 ```
 
-Prevent using extra classes or ids in your HTML where a modified CSS selector would suffice. 
+Prevent using extra classes or ids in your HTML where a modified CSS selector would suffice.
 
-## CSS/SCSS <a name="css"></a>
+<a name="css"></a>
+## CSS/SCSS
 Again, not much to say right now. I will be assuming the use of SCSS for 90% of the time.
 
 ### General
@@ -62,9 +76,10 @@ Example:
 	}
 }```
 
-Limit the use of ```!important``` to situations where there is no other option because of overlapping style rules. 
+Limit the use of ```!important``` to situations where there is no other option because of overlapping style rules.
 
-## PHP <a name="php"></a>
+<a name="php"></a>
+## PHP
 General
 A file that consists of purely PHP should not end with a PHP closing tag ( ```?>``` ), this is done to prevent any unintended white space after that closing tag.
 
@@ -80,7 +95,7 @@ function exampleFunction() {
 Try to initialize class/method specific variables at the beginning of that class/method.
 Make sure to write a comment before a function or code block. Describe the functionality, the parameters and return values. This has to be done using the [phpDocumenter](https://docs.phpdoc.org/) syntax, which works very similar to Javadoc.
 Example:
-```
+```php
 <?php
 /**
  * This document will show you how you are supposed to document a PHP file.
@@ -101,7 +116,27 @@ class documenter {
 }
 ```
 
-## JavaScript/jQuery <a name="js"></a>
+<a name="java"></a>
+## Java
+Just don't do it. jk todo.
+
+<a name="python"></a>
+## Python
+When you are trying to store multiple instances of the same type, use a list or array. When trying to store multiple pieces of data that are not of the same type but are still part of the same thing, use a tuple.
+Example:
+```python
+// Storing a list of song titles
+titles = ["Never Gonna Give You Up", "Ding Dang", "Shooting Stars"]
+
+// Storing a coordinate
+location = (12.3, 20.2)
+
+// This also allows you to easily unpack the earlier defined collection into seperate variables
+x, y = location
+```
+
+<a name="js"></a>
+## JavaScript/jQuery
 There are a lot of things that can be said about JavaScript, I’ll try to keep it limited.
 
 ### General
@@ -129,7 +164,7 @@ function exampleFunction(text) {
 
 When making a jQuery function, always end the function by returning ```this```, this allows the function to be chained with other functions.
 Example:
-```
+```javascript
 jQuery.fn.extend({
     exampleFunction: function () {
         alert(this.text);
