@@ -64,7 +64,8 @@ Example:
 ```css
 .redText {
 	color: red;
-}```
+}
+```
 
 Nest your code blocks whenever possible to prevent unwanted behaviour.
 Example:
@@ -74,7 +75,8 @@ Example:
 	.red {
 		color: red;
 	}
-}```
+}
+```
 
 Limit the use of ```!important``` to situations where there is no other option because of overlapping style rules.
 
