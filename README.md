@@ -41,6 +41,8 @@ Whenever a feature is done (in otherwords functional), there shall be a pull req
 ### Coding
 Use descriptive function/method/class/variable/file names. I don't want none of that ```int d = 1;``` bs. Exception being when the variable is used as an iterator. But you should have a long, hard, internal discussion before even thinking of doing that.
 
+Limit the amount of variables, operations and lines used as much as possible. Naturally, this will benefit the application in every way since less memory and processing power will be used.
+
 <a name="oop"></a>
 ## Object Orientated Programming
 This ain't hard, just make some classes.
