@@ -5,13 +5,11 @@ Hey hello
  
 This guide serves as a set of guidelines for writing maintainable and readable code troughout the entire webstack.
 This guide will cover:
--[HTML](#HTML)
 
--[CSS (SCSS)](#CSS/SCSS)
-
--[PHP](#PHP)
-
--[JavaScript (jQuery)](#Javascript/jQuery)
+- [HTML](#html)
+- [CSS (SCSS)](#css)
+- [PHP](#php)
+- [JavaScript (jQuery)](#js)
 
 
 Do not consider this guide final, additions are always welcome.
@@ -20,7 +18,7 @@ I do however strongly recommend following these guidlines if you want to prevent
 
 For the love of god, please make sure to configure the indentation settings of your editor/IDE to a single tab character with a width of 4 spaces. 
 
-## HTML
+## HTML <a name="HTML"></a>
 There isn’t much I can think up for HTML right now.
 
 ### General
@@ -41,7 +39,7 @@ Example:
 
 Prevent using extra classes or ids in your HTML where a modified CSS selector would suffice. 
 
-## CSS/SCSS
+## CSS/SCSS <a name="css"></a>
 Again, not much to say right now. I will be assuming the use of SCSS for 90% of the time.
 
 ### General
@@ -66,7 +64,7 @@ Example:
 
 Limit the use of ```!important``` to situations where there is no other option because of overlapping style rules. 
 
-## PHP
+## PHP <a name="php"></a>
 General
 A file that consists of purely PHP should not end with a PHP closing tag ( ```?>``` ), this is done to prevent any unintended white space after that closing tag.
 
@@ -103,7 +101,7 @@ class documenter {
 }
 ```
 
-## JavaScript/jQuery
+## JavaScript/jQuery <a name="js"></a>
 There are a lot of things that can be said about JavaScript, I’ll try to keep it limited.
 
 ### General
