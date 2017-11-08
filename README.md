@@ -10,6 +10,7 @@ This guide will cover:
 
 - [General Topics](#general)
 - [Object Orientated Programming](#oop)
+- [Functional Programming](#fp)
 - [HTML](#html)
 - [CSS (SCSS)](#css)
 - [PHP](#php)
@@ -20,7 +21,7 @@ This guide will cover:
 ### Why
 The point of maintaining code standards is to maintain a general sense of structure and quality within a project group to better allow expansion, understanding of the code, and resource management. A text document with examples is one of the best ways (if not the best one) to convey and collect these standards and because I have failed to find any other documents that suit my style and projects I have decided to create my own.
 
-Do not consider this guide final, additions are always welcome.
+Do not consider this guide final, additions are always welcome and I will make them myself whenever I see fit.
 
 I do however strongly recommend following these guidlines if you want to prevent your team members from going insane before the end of the project.
 
@@ -30,16 +31,17 @@ For the love of god, please make sure to configure the indentation settings of y
 ## General
 
 ### Project Structure
-A project should at all points be based around a method of version control in one form or another. My preference goes out to Git. Whenever I use Git in a project, I try to utilize a branch based workflow. This boils down to something very simple: the main project is kept on the master branch, this is the presentable branch. Which is updated at certain intervals, this could for example be after every sprint in a SCRUM-based project or at every release of your product. Next up is the development branch, this contains the most recent version of the project with all completed features. Lastly there is a collection of branches refered to as feature branches. These branches are where the developers will actually work.
+A project should at all points be based around a method of version control in one form or another. My preference goes out to Git. Whenever I use Git in a project, I try to utilize a branch based workflow. This boils down to something very simple: the main project is kept on the master branch, this is the presentable branch. Which is updated at certain intervals, this could for example be after every sprint in a SCRUM-based project or at every release of your product. Next up is the development branch, this contains the most recent version of the project with all completed features. Lastly there is a collection of branches refered to as feature branches. These branches are where the developers will actually work. Whenever a project consists of multiple seperate teams working on the same product, I suggest making multiple development branches (one for each team) based on the main development branch and use those to merge the features made by the team after which they get merged into de main development branch.
 
-Every seperate feature should get a seperate branch and the depenendency from one feature branch to another should be kept as small as possible. The developer will work according to the discussed coding standards.
-Whenever a commit is made, the developer should make clear that the commit message is a short, clear, description of the changes made in the commit.
-It is key for the developer to make a commit for every independent modification, so that commits can be easily reversed. A thing to keep in mind with this is: if you feel like using the words "and I also did" (or something of that nature) in your commit message, you should probably split this commit into multiple ones.
+Every seperate feature should get a seperate branch and the dependency from one feature branch to another should be kept as small as possible. All functionalities should be accompagnied by (unit) tests that will validate the actual functionality. The developer will work according to the discussed standards.
+Whenever a commit is made, the developer should ensure that the commit message is a short, clear, description of the changes made in the commit.
+It is key for the developer to make a commit for every independent modification, so that commits can be easily reverted. A thing to keep in mind with this is: if you feel like using the words "and I also did" (or something of that nature) in your commit message, you should probably split this commit into multiple ones.
 
-Whenever a feature is done (in otherwords functional), there shall be a pull request created from said feature branch to the development branch. This feature will have to be reviewed by the person that is responsible for the product quality, or someone appointed for this task by said quality manager. During the review process the reviewer will check whether the produced code fits the standards and if the functionallity works (which is determined by running the unit tests). If the conditions are met and there are no merge conflicts, the code can be merged into the development branch.
+Whenever a feature is done (in otherwords functional), there shall be a pull request created from said feature branch to the development branch. This feature will have to be reviewed by the person that is responsible for the product quality, or someone appointed for this task by said quality manager. During the review process the reviewer will check whether the produced code fits the standards and if it functiones the way it should (which is determined by running the unit tests). If the conditions are met and there are no merge conflicts, the code can be merged into the development branch.
+If the code is not ready for merging, the original author of the pull request has to amend his code to allow for merging.
 
 ### Coding
-Use descriptive function/method/class/variable/file names. I don't want none of that ```int d = 1;``` bs. Exception being when the variable is used as an iterator. But you should have a long, hard, internal discussion before even thinking of doing that.
+Use descriptive function/method/class/variable/file names. I don't want none of that ```int d = 1;``` bs. Exceptions being when the variable is used as an iterator or something along those lines. But you should have a long, hard, internal discussion before even thinking of doing something like that.
 
 Limit the amount of variables, operations and lines used as much as possible. Naturally, this will benefit the application in every way since less memory and processing power will be used.
 
@@ -47,9 +49,13 @@ Limit the amount of variables, operations and lines used as much as possible. Na
 ## Object Orientated Programming
 This ain't hard, just make some classes.
 
+<a name="fp"></a>
+## Functional Programming
+This ain't hard, just make some functions.
+
 <a name="html"></a>
 ## HTML
-There isn’t much I can think up for HTML right now. todo.
+There isn’t much I can think up for HTML right now so more will be added further down the line.
 
 ### General
 Children elements are supposed to be indented with a single tab charachter with a width of 4 spaces.
@@ -99,7 +105,8 @@ Limit the use of ```!important``` to situations where there is no other option b
 
 <a name="php"></a>
 ## PHP
-General
+
+### General
 A file that consists of purely PHP should not end with a PHP closing tag ( ```?>``` ), this is done to prevent any unintended white space after that closing tag.
 
 All PHP logic shall be written using an Object Orientated Approach. This means that there are no functions, only classes and methods. Functional PHP scripts belong to scriptkiddies and will harm testing, extensibility and clarity of the code in the long run.
@@ -137,10 +144,13 @@ class documenter {
 
 <a name="java"></a>
 ## Java
-Just don't do it. jk todo.
+
+### General
 
 <a name="python"></a>
 ## Python
+
+### General
 When you are trying to store multiple instances of the same type, use a list or array. When trying to store multiple pieces of data that are not of the same type but are still part of the same thing, use a tuple.
 Example:
 ```python
