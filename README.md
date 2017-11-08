@@ -9,7 +9,7 @@ Small note: this guide (especially the General Topics section) is not limited to
 This guide will cover:
 
 - [General Topics](#general)
-- [Object Orientated Programming](#oop)
+- [Object Oriented Programming](#oop)
 - [Functional Programming](#fp)
 - [HTML](#html)
 - [CSS (SCSS)](#css)
@@ -45,17 +45,40 @@ Use descriptive function/method/class/variable/file names. I don't want none of 
 
 Limit the amount of variables, operations and lines used as much as possible. Naturally, this will benefit the application in every way since less memory and processing power will be used.
 
+Something that is very important to keep in mind is the global scope. Avoid using global variables as they can lead to an application wide state which should be avoided whenever possible. This basically leads to code that is hard to test, hard to debug and very fragile when used in a multithreaded setting. An example of this is is when a function returns different outputs while receiving the same input.
+
+<!--- algorithm complexity --->
+<!--- method/function length --->
+
+### Testing
+All functionality should be tested via unit tests. Personally I always strive for 100% method/function coverage.
+A test should always only test one method/function. A test can test for various scenarious as long as the test output differentiates between the various cases.
+
 <a name="oop"></a>
-## Object Orientated Programming
-This ain't hard, just make some classes.
+## Object Oriented Programming
+Classes should be set up based on responsibility and a class should aim to have only one concern in order to limit the access to methods or attributes that should not be accessible from a specific use case.
+
+When naming a class it is obvious that a descriptive name should be used. To ease mutual understanding of class names, keep the following few conventions in mind:
+
+-When the creates objects, use the ```Factory``` suffix
+-When the class is responsible for coordination and communication between other business classes, use the ```Facade``` suffix
+-When the class is used to control the use of a resource class, use the ```Proxy``` suffix
+-When the class is wrapping another class in order to adjust its use for a consumer class, use the ```Adapter``` suffix
+
+Static classes are something that should be avoided since, just like global variables, they provide global state throughout the application. Besides that, static classes also result in global coupling which makes understanding and maintaining code harder than it needs to be, and it results in having to jump through a few hoops to be able to use isolated unit tests.
+
+On the topic of isolated unit tests, whenever an object is instantiated inside the business logic of another class, it will create a dependency between the two objects which in turn makes it impossible to create an isolated unit test for said business logic. The only way to actually test code that has been set up this way is by testing both classes at the same time since they are directly dependent and mocking is impossible. Naturally, this can be avoided by using a factory instead of having the object instantiated inside the business logic.
+
+Avoid having business logic inside the constructor of an object since it makes it harder to seperate the creation of the object from specific business actions.
 
 <a name="fp"></a>
 ## Functional Programming
-This ain't hard, just make some functions.
+Treat files as you would classes and split them up based on functionality.
+
+Prevent the use of mutable variables since they provide state like global variables do and this can severely hinder concurency. Any state should be passed as an input value to the function that has to be executed.
 
 <a name="html"></a>
 ## HTML
-There isn’t much I can think up for HTML right now so more will be added further down the line.
 
 ### General
 Children elements are supposed to be indented with a single tab charachter with a width of 4 spaces.
@@ -77,7 +100,7 @@ Prevent using extra classes or ids in your HTML where a modified CSS selector wo
 
 <a name="css"></a>
 ## CSS/SCSS
-Again, not much to say right now. I will be assuming the use of SCSS for 90% of the time.
+I will be assuming the use of SCSS for 90% of the time, it will be specified when this is not the case.
 
 ### General
 Constants that are to be used in multiple stylesheets should be defined in the ```variables.scss``` file. This file should contain no actual style rules, just variables. Try to initalize file specific variables at the beginning of the file.
@@ -146,6 +169,7 @@ class documenter {
 ## Java
 
 ### General
+<!--- todo --->
 
 <a name="python"></a>
 ## Python
