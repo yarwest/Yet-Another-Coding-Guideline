@@ -60,10 +60,10 @@ Classes should be set up based on responsibility and a class should aim to have 
 
 When naming a class it is obvious that a descriptive name should be used. To ease mutual understanding of class names, keep the following few conventions in mind:
 
--When the creates objects, use the ```Factory``` suffix
--When the class is responsible for coordination and communication between other business classes, use the ```Facade``` suffix
--When the class is used to control the use of a resource class, use the ```Proxy``` suffix
--When the class is wrapping another class in order to adjust its use for a consumer class, use the ```Adapter``` suffix
+- When the class creates objects, use the ```Factory``` suffix
+- When the class is responsible for coordination and communication between other business classes, use the ```Facade``` suffix
+- When the class controls the use of a resource class, use the ```Proxy``` suffix
+- When the class wraps another class in order to adjust its use for a consumer class, use the ```Adapter``` suffix
 
 Static classes are something that should be avoided since, just like global variables, they provide global state throughout the application. Besides that, static classes also result in global coupling which makes understanding and maintaining code harder than it needs to be, and it results in having to jump through a few hoops to be able to use isolated unit tests.
 
