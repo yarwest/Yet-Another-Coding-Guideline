@@ -41,11 +41,24 @@ Whenever a feature is done (in otherwords functional), there shall be a pull req
 If the code is not ready for merging, the original author of the pull request has to amend his code to allow for merging.
 
 ### Coding
-Use descriptive function/method/class/variable/file names. I don't want none of that ```int d = 1;``` bs. Exceptions being when the variable is used as an iterator or something along those lines. But you should have a long, hard, internal discussion before even thinking of doing something like that.
+Use descriptive function/method/class/variable/file names. I don't want none of that ```int d = 1;``` bs. Exceptions being when the variable is used as an iterator or something along those lines. But you should have a long, hard, internal discussion before even thinking of doing something like that. Use camelCase if the language allows that.
 
 Limit the amount of variables, operations and lines used as much as possible. Naturally, this will benefit the application in every way since less memory and processing power will be used.
 
 Something that is very important to keep in mind is the global scope. Avoid using global variables as they can lead to an application wide state which should be avoided whenever possible. This basically leads to code that is hard to test, hard to debug and very fragile when used in a multithreaded setting. An example of this is is when a function returns different outputs while receiving the same input.
+
+#### General Formating
+All variables and function names should be written in camel casing if the language allows this.
+
+When composing a code block, keep the following conventions in mind when applicable:
+
+- Do not use a line break before the opening brace
+- Use a line break after the opening brace
+- Use a line break before the closing brace
+- Use a line break after the closing brace, only if that brace terminates a statement or terminates the body of a method, constructor, or named class. For example, there is no line break after the brace if it is followed by an ```else``` or a comma
+
+#### Switch Statements
+A switch block should always contain a ```default``` case. Whenever, a fall-trough is used (omission of a ```break``` statement), this should be made clear in a comment.
 
 <!--- algorithm complexity --->
 <!--- method/function length --->
@@ -133,7 +146,7 @@ Limit the use of ```!important``` to situations where there is no other option b
 A file that consists of purely PHP should not end with a PHP closing tag ( ```?>``` ), this is done to prevent any unintended white space after that closing tag.
 
 All PHP logic shall be written using an Object Orientated Approach. This means that there are no functions, only classes and methods. Functional PHP scripts belong to scriptkiddies and will harm testing, extensibility and clarity of the code in the long run.
-The code is to be indented with a single tab charachter with a width of 4 spaces. The opening bracket of a code block is supposed to be on the same line as the signature. All variables and function names should be written in camel casing.
+The code is to be indented with a single tab charachter with a width of 4 spaces. The conventions surrounding code block shall be followed regarding the position of braces. All variables and function names should be written in camel casing.
 Example:
 ```php
 function exampleFunction() {
@@ -141,7 +154,7 @@ function exampleFunction() {
 }
 ```
 
-Try to initialize class/method specific variables at the beginning of that class/method.
+When initializing variables, try to do this close to their first usage. Variables should be initialized on declaration or almost immediately afterwards
 Make sure to write a comment before a function or code block. Describe the functionality, the parameters and return values. This has to be done using the [phpDocumenter](https://docs.phpdoc.org/) syntax, which works very similar to Javadoc.
 Example:
 ```php
@@ -184,13 +197,22 @@ Whenever importing classes from a package, do not use wildcard imports since mor
 
 The contents of a class should have a certain ordering amongst them, this can't just be a chronological order of creation but there should be some thought put into it as to improve readability.
 
+When initializing variables, try to do this close to their first usage. Variables should be initialized on declaration or almost immediately afterwards
+
+### Formating
+Optional braces, like with an ```if```, ```else```, ```for``` or ```ẁhile``` statements, should always be present to improve readability. The same goes for empty blocks, in this case it is expected to follow the code block conventions surrounding braces.
+
+Each statement should be on a seperate line.
+
+
+
 <!--- todo --->
 
 <a name="python"></a>
 ## Python
 
 ### General
-When you are trying to store multiple instances of the same type, use a list or array. When trying to store multiple pieces of data that are not of the same type but are still part of the same thing, use a tuple.
+When you are trying to store multiple instances of the same type, use a list or array. When trying to store multiple pieces of data that are not of the same type but are still part of the same concept, use a tuple.
 Example:
 ```python
 // Storing a list of song titles
@@ -208,7 +230,7 @@ x, y = location
 There are a lot of things that can be said about JavaScript, I’ll try to keep it limited.
 
 ### General
-The code is to be indented with a single tab charachter with a width of 4 spaces. The opening bracket of a code block is supposed to be on the same line as the signature. All variables and function names should be written in camel casing.
+The code is to be indented with a single tab charachter with a width of 4 spaces. The opening bracket of a code block is supposed to be on the same line as the signature.  All variables and function names should be written in camel casing.
 Example:
 ```javascript
 function exampleFunction() {
@@ -286,7 +308,7 @@ function exampleFunction() {
 
 Naturally, the downside of this is that certain variables are available outside of the loop that they are used in. Make sure to always  Be aware of such situations. Whenever you suspect it may lead to unexpected behaviour it is your primary concern to restrict the variables scope to the appropriate block.
 
-When initializing multiple variables, try to do this at the beginning of the appropriate block. It is possible to chain these variables but always make sure to declare base values seprately (so don’t do let me = you = 2) because this can lead to problems with the global namespace.
+When initializing multiple variables, try to do this close to their first usage. Variables should be initialized on declaration or almost immediately afterwards. It is possible to chain these variables but always make sure to declare base values seprately (so don’t do let me = you = 2) because this can lead to problems with the global namespace.
 Example:
 ```javascript
 let	i = 5,
