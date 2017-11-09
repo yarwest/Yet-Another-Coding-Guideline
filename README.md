@@ -169,6 +169,21 @@ class documenter {
 ## Java
 
 ### General
+A Java file should contain the following (in that order):
+
+- license or copyright statements (if they exist)
+- package statement
+- import statements
+- one top level class
+
+This obviously means that every top level class has its own filr. This provides a clearer and a more easy to understand structure of classes.
+
+The aforementioned sections should be clearly separated, which is usually done using a seperating blank line.
+
+Whenever importing classes from a package, do not use wildcard imports since more often than not they will lead to classes being imported while they are never used.
+
+The contents of a class should have a certain ordering amongst them, this can't just be a chronological order of creation but there should be some thought put into it as to improve readability.
+
 <!--- todo --->
 
 <a name="python"></a>
