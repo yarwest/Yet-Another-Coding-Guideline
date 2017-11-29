@@ -78,6 +78,18 @@ When naming a class it is obvious that a descriptive name should be used. To eas
 - When the class controls the use of a resource class, use the ```Proxy``` suffix
 - When the class wraps another class in order to adjust its use for a consumer class, use the ```Adapter``` suffix
 
+When the name of a parameter is/should be the same as an attribute of a class, the ```this``` keyword should be used rather than changing the name of the parameter.
+Example:
+```java
+public class Class {
+	private String name;
+
+	public void setName(String name) {
+		this.name = name;
+	}
+}
+```
+
 Static classes are something that should be avoided since, just like global variables, they provide global state throughout the application. Besides that, static classes also result in global coupling which makes understanding and maintaining code harder than it needs to be, and it results in having to jump through a few hoops to be able to use isolated unit tests.
 
 On the topic of isolated unit tests, whenever an object is instantiated inside the business logic of another class, it will create a dependency between the two objects which in turn makes it impossible to create an isolated unit test for said business logic. The only way to actually test code that has been set up this way is by testing both classes at the same time since they are directly dependent and mocking is impossible. Naturally, this can be avoided by using a factory instead of having the object instantiated inside the business logic.
