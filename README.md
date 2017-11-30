@@ -47,7 +47,7 @@ Limit the amount of variables, operations and lines used as much as possible. Na
 
 Something that is very important to keep in mind is the global scope. Avoid using global variables as they can lead to an application wide state which should be avoided whenever possible. This basically leads to code that is hard to test, hard to debug and very fragile when used in a multithreaded setting. An example of this is is when a function returns different outputs while receiving the same input.
 
-#### General Formating
+#### General Formatting
 All variables and function names should be written in camel casing if the language allows this.
 
 When composing a code block, keep the following conventions in mind when applicable:
@@ -211,7 +211,7 @@ The contents of a class should have a certain ordering amongst them, this can't 
 
 When initializing variables, try to do this close to their first usage. Variables should be initialized on declaration or almost immediately afterwards
 
-### Formating
+### Formatting
 Optional braces, like with an ```if```, ```else```, ```for``` or ```ẁhile``` statements, should always be present to improve readability. The same goes for empty blocks, in this case it is expected to follow the code block conventions surrounding braces.
 
 Each statement should be on a seperate line.
