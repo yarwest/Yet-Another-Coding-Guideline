@@ -100,7 +100,7 @@ Avoid having business logic inside the constructor of an object since it makes i
 ## Functional Programming
 Treat files as you would classes and split them up based on functionality.
 
-Prevent the use of mutable variables since they provide state like global variables do and this can severely hinder concurency. Any state should be passed as an input value to the function that has to be executed.
+Prevent the use of mutable variables since they provide state like global variables do and this can severely hinder concurrency. Any state should be passed as an input value to the function that has to be executed.
 
 <a name="html"></a>
 ## HTML
@@ -201,7 +201,7 @@ A Java file should contain the following (in that order):
 - import statements
 - one top level class
 
-This obviously means that every top level class has its own filr. This provides a clearer and a more easy to understand structure of classes.
+This obviously means that every top level class has its own file. This provides a clearer and a more easy to understand structure of classes.
 
 The aforementioned sections should be clearly separated, which is usually done using a seperating blank line.
 
