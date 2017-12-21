@@ -216,6 +216,19 @@ Optional braces, like with an ```if```, ```else```, ```for``` or ```ẁhile``` s
 
 Each statement should be on a seperate line.
 
+Code should be formatted as follows:
+
+```java
+public void setName(String name) {
+	try {
+		this.name = name;
+	} catch(Exception e) {
+		e.printStackTrace();
+	}
+}
+```
+
+Additionally, exceptions should be defined as precisely as possible.
 
 
 <!--- todo --->
