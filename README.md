@@ -228,7 +228,7 @@ public void setName(String name) {
 }
 ```
 
-Additionally, exceptions should be defined as precisely as possible.
+Additionally, exceptions should be defined as precisely as possible. So instead of ```Exception``` the ```ClassNotFoundException``` should be used in the catch.
 
 
 <!--- todo --->
