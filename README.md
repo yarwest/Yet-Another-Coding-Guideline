@@ -45,6 +45,8 @@ Use descriptive function/method/class/variable/file names. I don't want none of 
 
 Limit the amount of variables, operations and lines used as much as possible. Naturally, this will benefit the application in every way since less memory and processing power will be used. For the number of lines in a function/method, the hard limit, which is 50 lines, is very broad because it is thought that some amount of wiggle room should be kept with these kind of limitations.
 
+Even though the number of variables should be kept in mind, (recurring) magic values should be defined as constants at the top of their applicable block. The naming convention for these constants is ```MACRO_CASE``` to clarify that the value is a constant.
+
 Something that is very important to keep in mind is the global scope. Avoid using global variables as they can lead to an application wide state which should be avoided whenever possible. This basically leads to code that is hard to test, hard to debug and very fragile when used in a multithreaded setting. An example of this is is when a function returns different outputs while receiving the same input.
 
 #### General Formatting
