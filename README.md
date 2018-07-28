@@ -117,11 +117,7 @@ Example:
 </div>
 ```
 
-Classnames and ids of elements are supposed to be written in camelcasing. This is done to make sure there is no interference with Bootstrap styling (since Bootstrap uses snakecase).
-Example:
-```html
-<p class=”redText”>This is a red text</p>
-```
+Classnames and ids of elements are supposed to be written according to the [BEM conventions](http://getbem.com/naming/).
 
 Prevent using extra classes or ids in your HTML where a modified CSS selector would suffice.
 
@@ -140,16 +136,7 @@ Example:
 }
 ```
 
-Nest your code blocks whenever possible to prevent unwanted behaviour.
-Example:
-```css
-.text {
-	line-height: 5px;
-	.red {
-		color: red;
-	}
-}
-```
+Selectors should follow the [BEM conventions](http://getbem.com/naming/).
 
 Limit the use of ```!important``` to situations where there is no other option because of overlapping style rules.
 
