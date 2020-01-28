@@ -107,7 +107,7 @@ Prevent the use of mutable variables since they provide state like global variab
 ## HTML
 
 ### General
-Children elements are supposed to be indented with a single tab charachter with a width of 4 spaces.
+Children elements are supposed to be indented with a single tab character with a width of 4 spaces.
 Example:
 ```html
 <div class=”parentElement”>
@@ -127,7 +127,7 @@ I will be assuming the use of SCSS for 90% of the time, it will be specified whe
 ### General
 Constants that are to be used in multiple stylesheets should be defined in the ```variables.scss``` file. This file should contain no actual style rules, just variables. Try to initalize file specific variables at the beginning of the file.
 
-The style rules are to be indented with a single tab charachter with a width of 4 spaces. The opening bracket of a code block is supposed to be on the same line as the selector.
+The style rules are to be indented with a single tab character with a width of 4 spaces. The opening bracket of a code block is supposed to be on the same line as the selector.
 Example:
 ```css
 .redText {
@@ -146,7 +146,7 @@ Limit the use of ```!important``` to situations where there is no other option b
 A file that consists of purely PHP should not end with a PHP closing tag ( ```?>``` ), this is done to prevent any unintended white space after that closing tag.
 
 All PHP logic shall be written using an Object Orientated Approach. This means that there are no functions, only classes and methods. Functional PHP scripts belong to scriptkiddies and will harm testing, extensibility and clarity of the code in the long run.
-The code is to be indented with a single tab charachter with a width of 4 spaces. The conventions surrounding code block shall be followed regarding the position of braces. All variables and function names should be written in camel casing.
+The code is to be indented with a single tab character with a width of 4 spaces. The conventions surrounding code block shall be followed regarding the position of braces. All variables and function names should be written in camel casing.
 Example:
 ```php
 function exampleFunction() {
@@ -243,7 +243,7 @@ x, y = location
 There are a lot of things that can be said about JavaScript, I’ll try to keep it limited.
 
 ### General
-The code is to be indented with a single tab charachter with a width of 4 spaces. The opening bracket of a code block is supposed to be on the same line as the signature.  All variables and function names should be written in camel casing.
+The code is to be indented with a single tab character with a width of 4 spaces. The opening bracket of a code block is supposed to be on the same line as the signature.  All variables and function names should be written in camel casing.
 Example:
 ```javascript
 function exampleFunction() {
