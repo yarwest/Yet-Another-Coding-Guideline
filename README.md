@@ -25,7 +25,7 @@ Do not consider this guide final, additions are always welcome and I will make t
 
 I do however strongly recommend following these guidlines if you want to prevent your team members from going insane before the end of the project.
 
-For the love of god, please make sure to configure the indentation settings of your editor/IDE to a single tab character with a width of 4 spaces.
+For the love of god, please make sure to configure the indentation settings of your editor/IDE to a single tab character with a width of 4 spaces. (or two, do whatever you want)
 
 <a name="general"></a>
 ## General
