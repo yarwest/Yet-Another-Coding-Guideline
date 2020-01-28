@@ -1,5 +1,4 @@
 # Yet Another Coding Guideline
-Hey hello
 
 # Coding Style Guide/Best Practices
 
